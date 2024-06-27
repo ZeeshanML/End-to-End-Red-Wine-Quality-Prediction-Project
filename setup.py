@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "End-to-End-Red-Wine-Quality-Prediction-Project"
 AUTHOR_USER_NAME = "ZeeshanML"
-SRC_REPO = "Red Wine Quality Prediction"
+SRC_REPO = "Red_Wine_Quality_Prediction"
 AUTHOR_EMAIL = "z33shanlatif007@gmail.com"
 
 
