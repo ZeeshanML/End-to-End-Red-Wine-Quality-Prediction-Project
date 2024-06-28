@@ -5,3 +5,4 @@ data_ingestion :
   source_URL : https://github.com/ZeeshanML/End-to-End-Red-Wine-Quality-Prediction-Project/raw/main/data/wineQuality-data.zip
   local_data_file : artifacts/data_ingestion/data.zip
   unzip_dir : artifacts/data_ingestion
+  
