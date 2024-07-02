@@ -28,7 +28,7 @@ if __name__ == '__main__':
         raise e
 
 
-STAGE_NAME = "Data Transformation stage"
+STAGE_NAME = "Data Transformation"
 try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
    data_transformation = DataTransformationTrainingPipeline()

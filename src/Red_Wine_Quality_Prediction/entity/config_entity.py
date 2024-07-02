@@ -21,3 +21,4 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir : Path
     data_path : Path
+    preprocessed_data_path : Path
