@@ -1,1 +1,4 @@
-key : val
+RandomForestClassifier :  
+  n_estimators : 1000
+  bootstrap : False
+  class_weight : "balanced"
