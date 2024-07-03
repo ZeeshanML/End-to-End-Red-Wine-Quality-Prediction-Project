@@ -162,5 +162,5 @@ cython_debug/
 #.idea/
 
 
-model.joblib
+/artifacts/model_trainer/model.joblib
 
