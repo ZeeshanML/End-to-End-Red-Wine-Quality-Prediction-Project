@@ -41,7 +41,7 @@ def index():
             
             obj = PredictionPipeline()
             predict = obj.predict(data)
-
+            predict = predict[0]
             return render_template('results.html', prediction = str(predict))
 
         except Exception as e:
