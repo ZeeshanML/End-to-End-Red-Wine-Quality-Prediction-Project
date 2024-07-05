@@ -42,6 +42,9 @@ To get started with this project, follow the steps below:
 2. **Create a virtual environment and activate it**:
     ```bash
     python3 -m venv venv
+    ```
+
+    ```bash
     source venv/bin/activate
     ```
 
