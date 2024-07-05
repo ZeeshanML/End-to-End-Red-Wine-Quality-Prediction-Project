@@ -36,7 +36,6 @@ To get started with this project, follow the steps below:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/ZeeshanML/End-to-End-Red-Wine-Quality-Prediction-Project.git
-    cd red-wine-quality-prediction
     ```
 
 2. **Create a virtual environment and activate it**:
