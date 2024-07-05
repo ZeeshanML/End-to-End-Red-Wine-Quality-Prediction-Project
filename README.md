@@ -8,8 +8,6 @@
 5. [Workflows](#workflows)
 6. [How to Run](#how-to-run)
 7. [AWS CICD Deployment with GitHub Actions](#aws-cicd-deployment-with-github-actions)
-    - [Deployment Description](#deployment-description)
-    - [IAM User and Policies Setup](#iam-user-and-policies-setup)
     - [EC2 and Docker Setup](#ec2-and-docker-setup)
 8. [Conclusion](#conclusion)
 9. [About Author](#about-author)
@@ -82,25 +80,10 @@ Follow these steps to run the project:
 
 ## AWS CICD Deployment with GitHub Actions
 1. **Login to AWS Console**.
-2. **Create IAM User for Deployment** with specific access:
-   - **EC2 Access**: Virtual machine management.
-   - **ECR**: Elastic Container Registry for storing Docker images.
-   - **Policies**:
-     - `AmazonEC2ContainerRegistryFullAccess`
-     - `AmazonEC2FullAccess`
-
-### Deployment Description
-1. **Build Docker Image**: Create a Docker image of the source code.
-2. **Push Docker Image to ECR**: Store the image in AWS ECR.
-3. **Launch EC2 Instance**: Start an EC2 instance.
-4. **Pull Image from ECR in EC2**: Retrieve the Docker image.
-5. **Launch Docker Image in EC2**: Run the Docker image.
-
-### IAM User and Policies Setup
-1. **Create IAM User** with the following policies:
+2. **Create IAM User** with the following policies:
     - `AmazonEC2ContainerRegistryFullAccess`
     - `AmazonEC2FullAccess`
-2. **Create ECR Repository**:
+3. **Create ECR Repository**:
     - Save the URI
 
 ### EC2 and Docker Setup
@@ -127,14 +110,8 @@ Follow these steps to run the project:
     - `ECR_REPOSITORY_NAME`
 
 ## Conclusion
-This project demonstrates a complete end-to-end machine learning pipeline for predicting the quality of red wine. By following best practices in data processing, model development, and deployment, we have created a robust system capable of delivering accurate predictions. 
 
-### Key Takeaways:
-- **Data Processing**: Effective data ingestion, validation, and transformation are crucial for building a reliable model.
-- **Model Development**: The Random Forest Classifier was selected for its robustness and high performance, achieving an accuracy of 87%.
-- **Deployment**: Leveraging AWS CICD with GitHub Actions ensures seamless deployment and scalability.
-
-Through this project, we have highlighted the importance of a structured approach to machine learning and demonstrated the practical applications of deploying machine learning models in a real-world environment. The methodology and tools used in this project can be extended to other machine learning tasks, providing a solid foundation for further exploration and development.
+This project demonstrates an end-to-end machine learning pipeline for predicting the quality of red wine. It encompasses data processing, model development, and deployment using AWS CICD. The Random Forest classifier achieved an accuracy of around 87%, highlighting the model's effectiveness in predicting wine quality.
 
 
 ## About Author
