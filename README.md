@@ -9,7 +9,8 @@
 6. [How to Run](#how-to-run)
 7. [AWS CICD Deployment with GitHub Actions](#aws-cicd-deployment-with-github-actions)
     - [Deployment Description](#deployment-description)
-    - [Policy](#policy)
+    - [IAM User and Policies Setup](#iam-user-and-policies-setup)
+    - [EC2 and Docker Setup](#ec2-and-docker-setup)
 8. [Conclusion](#conclusion)
 9. [About Author](#about-author)
 
@@ -50,8 +51,7 @@ To get started with this project, follow the steps below:
     ```
 
 ## Resources
-- **Dataset**: [Red Wine Quality Dataset](https://archive.ics.uci.edu/ml/datasets/Wine+Quality)
-- **Documentation**: [Project Documentation](link-to-your-documentation)
+- **Dataset**: [Red Wine Quality Dataset](https://www.kaggle.com/datasets/yasserh/wine-quality-dataset)
 - **License**: [MIT License](LICENSE)
 
 ## License
@@ -83,6 +83,9 @@ Follow these steps to run the project:
 2. **Create IAM User for Deployment** with specific access:
    - **EC2 Access**: Virtual machine management.
    - **ECR**: Elastic Container Registry for storing Docker images.
+   - **Policies**:
+     - `AmazonEC2ContainerRegistryFullAccess`
+     - `AmazonEC2FullAccess`
 
 ### Deployment Description
 1. **Build Docker Image**: Create a Docker image of the source code.
@@ -91,13 +94,16 @@ Follow these steps to run the project:
 4. **Pull Image from ECR in EC2**: Retrieve the Docker image.
 5. **Launch Docker Image in EC2**: Run the Docker image.
 
-### Policy
-1. Attach the following policies to your IAM user:
+### IAM User and Policies Setup
+1. **Create IAM User** with the following policies:
     - `AmazonEC2ContainerRegistryFullAccess`
     - `AmazonEC2FullAccess`
-2. **Create ECR Repository**
-3. **Create EC2 Machine (Ubuntu)**
-4. **Install Docker on EC2**:
+2. **Create ECR Repository**:
+    - Save the URI
+
+### EC2 and Docker Setup
+1. **Create EC2 Machine (Ubuntu)**
+2. **Install Docker on EC2**:
     ```bash
     # Optional
     sudo apt-get update -y
@@ -108,10 +114,10 @@ Follow these steps to run the project:
     sudo usermod -aG docker ubuntu
     newgrp docker
     ```
-5. **Configure EC2 as Self-Hosted Runner**:
+3. **Configure EC2 as Self-Hosted Runner**:
     - Go to `Settings > Actions > Runners > New self-hosted runner`.
     - Choose OS and execute the provided commands.
-6. **Setup GitHub Secrets**:
+4. **Setup GitHub Secrets**:
     - `AWS_ACCESS_KEY_ID`
     - `AWS_SECRET_ACCESS_KEY`
     - `AWS_REGION`
