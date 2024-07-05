@@ -142,7 +142,7 @@ Through this project, we have highlighted the importance of a structured approac
 - **Name**: Zeeshan Latif
 - **Email**: [zeeshanlatif.work@gmail.com](mailto:zeeshanlatif.work@gmail.com)
 - **Professional Links**:
-    - Kaggle: [Profile](https://www.kaggle.com/zeeshanlatif)
-    - LinkedIn: [Profile](https://www.linkedin.com/in/zeeshan-latif-2962211b1)
-    - GitHub: [Profile](https://github.com/ZeeshanML)
+    - [Kaggle](https://www.kaggle.com/zeeshanlatif)
+    - [LinkedIn](https://www.linkedin.com/in/zeeshan-latif-2962211b1)
+    - [GitHub](https://github.com/ZeeshanML)
 - **Project Repository**: [GitHub Repo](https://github.com/ZeeshanML/End-to-End-Red-Wine-Quality-Prediction-Project)
